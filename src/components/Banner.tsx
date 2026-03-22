@@ -56,7 +56,7 @@ export default function Banner({ items }: Props) {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0 hover:cursor-pointer">
         {items.map((slide, index) => (
           <div
             key={slide.id}
@@ -77,7 +77,7 @@ export default function Banner({ items }: Props) {
       {items.map((slide, index) => (
         <div
           key={slide.id }
-          className={`absolute bottom-24 left-0 right-0 z-20 flex flex-col items-center text-center px-8 transition-all duration-500 ${
+          className={`flex flex-col items-center text-center lg:items-start lg:text-left px-8 absolute bottom-24 left-0 right-0 z-20 transition-all duration-500 ${
             index === currentIndex 
               ? "opacity-100 translate-y-0" 
               : "opacity-0 translate-y-8 pointer-events-none"
@@ -93,7 +93,7 @@ export default function Banner({ items }: Props) {
             </p>
           )}
           
-          <button className="mt-8 flex items-center justify-center gap-3 px-12 py-3.5 bg-[#0049C8] text-white text-base font-bold rounded-md active:scale-95 transition-transform">
+          <button className="mt-8 flex items-center justify-center gap-3 px-12 py-3.5 bg-[#0049C8] text-white text-base font-bold rounded-md active:scale-95 transition- hover:cursor-pointer">
             <FaPlay size={14} />
             Watch Now
           </button>
@@ -105,7 +105,7 @@ export default function Banner({ items }: Props) {
           <button
             key={slide.id}
             onClick={() => setCurrentIndex(index)}
-            className={`h-1.5 transition-all duration-300 rounded-full ${
+            className={`h-1.5 transition-all duration-300 rounded-full hover:cursor-pointer ${
               index === currentIndex ? "w-8 bg-white" : "w-2 bg-white/30"
             }`}
           />
