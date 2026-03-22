@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Watch Brasil — Frontend Challenge
 
-## Getting Started
+Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Frontend Developer Jr.
+O objetivo é construir uma interface mobile-first para uma plataforma de streaming utilizando o conceito de Server-Driven UI (SDUI).
 
-First, run the development server:
+A interface foi construída priorizando dispositivos móveis, com adaptação progressiva para telas maiores.
 
+## 1- Como instalar e rodar o projeto
+
+clonar o repositório
+```bash
+git clone https://github.com/GioSalvador/watchbrasil-frontend-challenge
+```
+entrar na pasta do projeto
+```bash
+cd watchbrasil-frontend-challenge
+```
+instalar dependências
+```bash
+npm install
+```
+rodar em ambiente de desenvolvimento
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+A aplicação estará disponível em:
+```bash
+http://localhost:3000
+```
+Observações:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Caso a API esteja inativa, pode levar alguns segundos para responder (cold start)
+Não é necessário configurar variáveis de ambiente para rodar o projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2- Visão Geral
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A aplicação consome uma API que define dinamicamente a estrutura da página através de shelves (seções), onde cada uma possui um tipo de layout e uma lista de conteúdos.
 
-## Learn More
+O frontend atua como um renderizador dinâmico, interpretando esses dados e montando a interface em tempo de execução.
 
-To learn more about Next.js, take a look at the following resources:
+## 3- Conceito Principal — SDUI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A ideia de SDUI (Server-Driven UI) é permitir que o backend controle:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Estrutura da página
+2. Ordem dos componentes
+3. Tipos de layout (Banner, Carousel, List)
 
-## Deploy on Vercel
+Isso permite:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Alterações sem deploy no frontend
+2. Maior flexibilidade de produto
+3. Evolução mais rápida da interface
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Stack utilizada
+- React + Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- React Icons
+
+## 4- Arquitetura
+Fluxo de dados:
+```bash
+API → Service → Renderer → Componentes → UI
+```
+Estrutura principal:
+- services/ → comunicação com API
+- types/ → tipagem dos dados
+- components/ → componentes visuais
+- renderer/ → lógica dinâmica de renderização (SDUI)
+
+Como funciona a renderização:
+
+A API retorna uma lista de shelves com o seguinte formato:
+
+- layout: tipo do componente (Banner, Carousel, List)
+- items: conteúdos a serem exibidos
+- position: ordem na página
+
+O renderer mapeia o layout para um componente React:
+```bash
+const componentMap = {
+  Banner,
+  Carousel,
+  List,
+};
+```
+E renderiza dinamicamente com base no retorno da API.
+
+## 5- Considerações Finais
+A solução proposta busca equilibrar simplicidade e escalabilidade, servindo como base para evolução futura da plataforma.
+O MVP desenvolvido demonstra o conceito de SDUI de forma prática, sendo suficiente para demonstrar a ideia e orientar os próximos passos do produto.
