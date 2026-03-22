@@ -11,7 +11,7 @@ export default async function Home({ searchParams }: Props) {
   const page = Number(params.page) || 1;
 
   const shelves = await getShelves(page);
-  console.log(shelves)
+  // console.log(shelves)
 
   return (
     <main className="bg-black min-h-screen">

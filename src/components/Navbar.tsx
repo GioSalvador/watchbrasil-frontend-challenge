@@ -25,7 +25,7 @@ export default function Navbar({ currentPage }: Props) {
 
   return (
     <header className="relative w-full h-[80px] flex items-center justify-between px-4 py-3 bg-black text-white">
-      <button onClick={() => setIsOpen(!isOpen)}>
+      <button onClick={() => setIsOpen(!isOpen)} className="hover:cursor-pointer">
         <FaBars size={20} />
       </button>
 
@@ -55,7 +55,7 @@ export default function Navbar({ currentPage }: Props) {
           <a
             href="https://www.linkedin.com/in/giovani-salvador/"
             target="_blank"
-            className="px-4 py-3 hover:bg-gray-900 text-gray-400 font-bold"
+            className="px-4 py-3 hover:bg-gray-900 text-white font-bold"
           >
             Contact
           </a>
