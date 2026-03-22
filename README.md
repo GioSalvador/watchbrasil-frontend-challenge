@@ -3,7 +3,12 @@
 Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Frontend Developer Jr.
 O objetivo é construir uma interface mobile-first para uma plataforma de streaming utilizando o conceito de Server-Driven UI (SDUI).
 
-A interface foi construída priorizando dispositivos móveis, com adaptação progressiva para telas maiores.
+A interface foi desenvolvida com foco em mobile-first, priorizando a experiência em dispositivos móveis, conforme proposto no desafio.
+
+A versão desktop está funcional, porém ainda possui pontos de melhoria em termos de layout e aproveitamento de espaço, podendo ser refinada em uma evolução futura do projeto.
+
+Link da demonstração
+[AQUI](https://watchbrasil-frontend-challenge.vercel.app/)
 
 ## 1- Como instalar e rodar o projeto
 
