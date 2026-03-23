@@ -1,4 +1,4 @@
-![preview](https://github.com/user-attachments/assets/82edb797-636c-499c-87a2-f1f54e3df249)# Watch Brasil — Frontend Challenge
+# Watch Brasil — Frontend Challenge
 
 Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Frontend Developer Jr.
 O objetivo é construir uma interface mobile-first para uma plataforma de streaming utilizando o conceito de Server-Driven UI (SDUI).
