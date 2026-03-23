@@ -1,4 +1,4 @@
-# Watch Brasil — Frontend Challenge
+![preview](https://github.com/user-attachments/assets/82edb797-636c-499c-87a2-f1f54e3df249)# Watch Brasil — Frontend Challenge
 
 Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Frontend Developer Jr.
 O objetivo é construir uma interface mobile-first para uma plataforma de streaming utilizando o conceito de Server-Driven UI (SDUI).
@@ -10,8 +10,9 @@ A versão desktop está funcional, porém ainda possui pontos de melhoria em ter
 Link da demonstração
 [AQUI](https://watchbrasil-frontend-challenge.vercel.app/)
 
+![preview](https://github.com/user-attachments/assets/f3113409-c17f-4b7d-a816-18b2fae41185)
+
 ## 1- Como instalar e rodar o projeto
-![preview](https://github.com/user-attachments/assets/39a69d85-b564-451a-98b9-b11b94350d34)
 
 clonar o repositório
 ```bash
