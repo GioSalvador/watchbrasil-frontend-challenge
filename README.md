@@ -11,6 +11,7 @@ Link da demonstração
 [AQUI](https://watchbrasil-frontend-challenge.vercel.app/)
 
 ## 1- Como instalar e rodar o projeto
+![preview](https://github.com/user-attachments/assets/39a69d85-b564-451a-98b9-b11b94350d34)
 
 clonar o repositório
 ```bash
